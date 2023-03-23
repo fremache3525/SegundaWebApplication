@@ -7,6 +7,7 @@ import { UsuariosComponent } from './vistas/usuarios/usuarios.component';
 import { ClientesComponent } from './vistas/clientes/clientes.component';
 import { PedidosComponent } from './vistas/pedidos/pedidos.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
+import { LoginComponent } from './vistas/login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductosComponent } from './vistas/productos/productos.component';
     UsuariosComponent,
     ClientesComponent,
     PedidosComponent,
-    ProductosComponent
+    ProductosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
