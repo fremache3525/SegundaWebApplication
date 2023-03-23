@@ -23,6 +23,6 @@ export class PedidosComponent {
     this.router.navigate(['clientes']);
   }
   nuevoPedido(){
-    this.router.navigate(['realizarPedido']);
+    this.router.navigate(['productos']);
   }
 }

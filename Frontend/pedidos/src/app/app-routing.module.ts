@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'pedidos',component:PedidosComponent},//
   {path:'clientes',component:ClientesComponent},//
   {path:'usuarios',component:UsuariosComponent},//
-  {path:'realizarPedido',component:RealizarPedidoComponent},//
+  {path:'realizarPedido/:id',component:RealizarPedidoComponent},//
 
 ];
 

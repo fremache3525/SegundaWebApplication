@@ -4,6 +4,7 @@ import {clienteI} from '../../modelos/clientes.interface'
 import {ResponseI} from '../../modelos/response.interface'
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import {listaPedidosI} from 'src/app/modelos/listaPedidos.interface';
+import { listaProductosI } from 'src/app/modelos/listaProductos.interface';
 import {Observable} from 'rxjs'
 
 @Injectable({
@@ -26,5 +27,10 @@ export class ApiServiceService {
     let direccion = this.url+"Pedidos";
 
     return this.http.get<listaPedidosI[]>(direccion);
+  }
+  obtenerProductos():Observable<listaProductosI[]>{
+    let direccion = this.url+"Productos";
+
+    return this.http.get<listaProductosI[]>(direccion);
   }
 }
