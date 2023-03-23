@@ -18,11 +18,14 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Fecha</label>
-            <input type="number" class="form-control" placeholder="Fecha">
+            <input type="date" class="form-control" placeholder="Fecha">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Estado</label>
-            <input type="number" class="form-control" placeholder="Estado">
+            <select name="select" class="form-control">
+                <option value="value1" selected>Pendiente</option>
+                <option value="value2" >Entregado</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Id</label>
@@ -42,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Total</label>
-            <input type="number" class="form-control" placeholder="Cantidad" >
+            <input type="number" class="form-control" placeholder="Total" >
         </div>
         <br><br>
         <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
