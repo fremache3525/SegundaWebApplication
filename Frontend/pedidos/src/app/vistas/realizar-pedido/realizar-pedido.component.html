@@ -1,1 +1,44 @@
-<p>realizar-pedido works!</p>
+<div class="container">
+    <form [formGroup]="editarForm" (ngSubmit)="postForm()">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Cliente</label>
+            <input type="number" class="form-control" placeholder="Stock"  id="Stock">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Usuario</label>
+            <input type="number" class="form-control" placeholder="Usuario" >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha</label>
+            <input type="number" class="form-control" placeholder="Fecha">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Estado</label>
+            <input type="number" class="form-control" placeholder="Estado">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id</label>
+            <input type="text" class="form-control" placeholder="Id Producto" formControlName="id" #id>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Producto</label>
+            <input type="text" class="form-control" placeholder="Nombre del Producto" formControlName="nombre" >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Precio</label>
+            <input type="text" class="form-control" placeholder="Precio" formControlName="precio" >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Cantidad</label>
+            <input type="number" class="form-control" placeholder="Cantidad">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Total</label>
+            <input type="number" class="form-control" placeholder="Cantidad" >
+        </div>
+        <br><br>
+        <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar </button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+    </form>
+  
+</div>
