@@ -5,6 +5,7 @@ import { ProductosComponent } from './vistas/productos/productos.component';
 import { PedidosComponent } from './vistas/pedidos/pedidos.component';
 import { ClientesComponent } from './vistas/clientes/clientes.component';
 import { UsuariosComponent } from './vistas/usuarios/usuarios.component';
+import { RealizarPedidoComponent } from './vistas/realizar-pedido/realizar-pedido.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},//
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'pedidos',component:PedidosComponent},//
   {path:'clientes',component:ClientesComponent},//
   {path:'usuarios',component:UsuariosComponent},//
+  {path:'realizarPedido',component:RealizarPedidoComponent},//
 
 ];
 

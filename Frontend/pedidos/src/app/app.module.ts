@@ -14,6 +14,7 @@ import { ClientesComponent } from './vistas/clientes/clientes.component';
 import { PedidosComponent } from './vistas/pedidos/pedidos.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
 import { LoginComponent } from './vistas/login/login.component';
+import { RealizarPedidoComponent } from './vistas/realizar-pedido/realizar-pedido.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './vistas/login/login.component';
     ClientesComponent,
     PedidosComponent,
     ProductosComponent,
-    LoginComponent
+    LoginComponent,
+    RealizarPedidoComponent
   ],
   imports: [
     BrowserModule,
