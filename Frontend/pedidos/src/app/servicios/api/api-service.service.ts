@@ -8,10 +8,10 @@ import {Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class ApiServiceService {
-  url:string = "http://localhost:57253/api/";
+  url:string = "http://localhost:53874/api/";
   constructor(private http:HttpClient) { }
 
-  loginByUsuario(form:loginI):Observable<ResponseI>{
+  loginByUsuario(form:any):Observable<ResponseI>{
     let direccion  = this.url + "Usuarios/Ingresar"
     return this.http.post<ResponseI>(direccion, form);
   }

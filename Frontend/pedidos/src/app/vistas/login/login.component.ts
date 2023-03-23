@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms'
-import { ApiServiceService } from 'src/app/servicios/api/api-service.service';
+import {ApiServiceService} from 'src/app/servicios/api/api-service.service';
 import {loginI} from '../../modelos/login.interface'
 import {Router} from '@angular/router'
 import {ResponseI} from '../../modelos/response.interface'
@@ -23,12 +23,13 @@ export class LoginComponent {
   }
   checkLocalStorage(){
     if(localStorage.getItem('token')){
-      this.router.navigate(['products']);
+      this.router.navigate(['productos']);
     }
   }
 
   errorStatus:boolean = false;
   errorMsj:any="";
+
   onLogin(form:any){
     //console.log(form)
     this.api.loginByUsuario(form).subscribe(data =>{
