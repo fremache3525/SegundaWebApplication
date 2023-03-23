@@ -25,6 +25,10 @@ export class ApiServiceService {
     let direccion = this.url+"Clientes";
     return this.http.post<ResponseI>(direccion,form);
   }
+  crearPedido(form:any):Observable<ResponseI>{
+    let direccion = this.url+"Pedidos";
+    return this.http.post<ResponseI>(direccion,form);
+  }
   obtenerPedidos():Observable<listaPedidosI[]>{
     let direccion = this.url+"Pedidos";
 

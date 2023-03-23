@@ -22,7 +22,19 @@ export class RealizarPedidoComponent {
     nombre: new FormControl(''),
     precio: new FormControl()
   });
+  nuevoForm = new FormGroup({
+    usuario: new FormControl()
+  });
   clientes:listaClienteI[] =[];
+
+
+
+  usuarioObtenido:string="";
+ 
+  public getInputValue(inputValue:string){
+    console.log(inputValue);
+    this.usuarioObtenido=inputValue;
+  }
   ngOnInit():void{
     this.productoid = this.activerouter.snapshot.paramMap.get('id');
     let token = this.getToken();
@@ -33,6 +45,7 @@ export class RealizarPedidoComponent {
         'nombre': data.nombre,
         'precio': data.precio
       })
+     
      //console.log(this.editarForm.value);
 
      ///////////////
@@ -42,7 +55,24 @@ export class RealizarPedidoComponent {
     });
     
     })
-  
+
+  }
+  postForm(){
+    this.nuevoForm.setValue({
+      'usuario':this.usuarioObtenido
+      })
+    this.api.crearPedido(this.nuevoForm.value).subscribe(data =>{
+      //console.log(data);
+      //let respuesta:ResponseI = data;
+      /*if(respuesta.result == 1){
+        this.alertas.showSucces('Datos Modificados','Hecho');
+      
+      }else{
+        this.alertas.showError(respuesta.message,'Error')
+      }*/
+      this.router.navigate(['pedidos']);
+    })
+    //console.log(this.editarForm.value);
   }
   salir(){
       this.router.navigate(['pedidos']);
