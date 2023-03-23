@@ -21,12 +21,12 @@ export class ProductosComponent {
   }
   editarProducto(id:number){
     console.log(id)
-    this.router.navigate(['realizarPedido']);
+    this.router.navigate(['realizarPedido',id]);
   }
   nuevoCliente(){
     this.router.navigate(['clientes']);
   }
   nuevoPedido(){
-    this.router.navigate(['realizarPedido']);
+    this.router.navigate(['realizarPedidos']);
   }
 }
