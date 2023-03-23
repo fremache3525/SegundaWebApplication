@@ -1,1 +1,37 @@
-<p>clientes works!!!!</p>
+
+<div class="container">
+    <form [formGroup]="nuevoForm" (ngSubmit)="postForm()">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellido</label>
+            <input type="text" class="form-control" placeholder="Apellido" formControlName="apellido">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Ruc</label>
+            <input type="text" class="form-control" placeholder="Ruc" formControlName="ruc">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Telefono</label>
+            <input type="number" class="form-control" placeholder="Telefono" formControlName="telefono">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Direccion</label>
+            <input type="text" class="form-control" placeholder="Direccion" formControlName="direccion">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Latitud</label>
+            <input type="number" class="form-control" placeholder="Latitud" formControlName="latitud">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Longitud</label>
+            <input type="number" class="form-control" placeholder="Longitud" formControlName="longitud">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar </button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+    </form>
+</div>
+

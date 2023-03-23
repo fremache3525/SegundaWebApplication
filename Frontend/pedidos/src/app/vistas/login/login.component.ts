@@ -23,7 +23,7 @@ export class LoginComponent {
   }
   checkLocalStorage(){
     if(localStorage.getItem('token')){
-      this.router.navigate(['productos']);
+      this.router.navigate(['pedidos']);
     }
   }
 
@@ -37,7 +37,7 @@ export class LoginComponent {
       let dataResponse:ResponseI = data;
       if(dataResponse.result == 1){
         localStorage.setItem("token",dataResponse.token);
-        this.router.navigate(['productos']);
+        this.router.navigate(['pedidos']);
       }else{
         this.errorStatus = true;
         this.errorMsj = dataResponse.message;
