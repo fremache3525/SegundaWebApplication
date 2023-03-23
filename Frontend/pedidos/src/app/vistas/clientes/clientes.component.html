@@ -1,4 +1,10 @@
-
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
 <div class="container">
     <form [formGroup]="nuevoForm" (ngSubmit)="postForm()">
         <div class="form-group">
@@ -29,6 +35,7 @@
             <label for="exampleFormControlInput1">Longitud</label>
             <input type="number" class="form-control" placeholder="Longitud" formControlName="longitud">
         </div>
+        <div id="map"></div>
         <br><br>
         <button type="submit" class="btn btn-primary">Guardar </button>
         <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
